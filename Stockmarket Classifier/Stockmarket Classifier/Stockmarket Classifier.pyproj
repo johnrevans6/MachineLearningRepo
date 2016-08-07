@@ -32,6 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="symbols.csv" />
     <Content Include="templates\main.html" />
   </ItemGroup>
   <ItemGroup>

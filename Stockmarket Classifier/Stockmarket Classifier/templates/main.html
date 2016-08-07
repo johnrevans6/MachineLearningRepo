@@ -15,11 +15,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-3">Symbol</div>
-        <div class="col-md-3">Cost</div>
-        <div class="col-md-3">Benefit</div>
-        <div class="col-md-3">Confidence</div>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">Symbol</div>
+            <div class="col-md-3">Cost</div>
+            <div class="col-md-3">Benefit</div>
+            <div class="col-md-3">Confidence</div>
+        </div>
+        <hr/>
+        {% for stock in stocks %}
+            <div class="row">
+                <div class="col-md-3"> <a href={{stock.url}} target="_blank">{{stock.symbol}}</a></div>
+                <div class="col-md-3"> {{stock.cost}}</div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+            </div>
+            <hr/>
+        {% endfor %}
+
+        <hr/>
     </div>
 </body>
 </html>
